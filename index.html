@@ -7,48 +7,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@112.5,300&family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="calculator">
         <div class="screen-container">
             <div class="screen" id="mini-screen">
-                <p id="mini-text">1 + 1 =</p>
+                <p id="mini-text"></p>
             </div>
             <div class="screen" id="large-screen">
-                <p id="large-text">2</p>
+                <p id="large-text">0</p>
             </div>
         </div>
         <div class="buttons-container">
             <div class="button-row" id="first-row">
-                <button id="sign-change">+/-</button>
+                <button class="operator-btn" id="square">x²</button>
                 <button id="clear-entry">CE</button>
                 <button id="clear-all">C</button>
                 <button id="backspace">⌫ </button>
             </div>
             <div class="button-row" id="second-row">
-                <button id="number-btn">1</button>
-                <button id="number-btn">2</button>
-                <button id="number-btn">3</button>
-                <button class="operator" id="divide">÷</button>
+                <button class="number-btn">1</button>
+                <button class="number-btn">2</button>
+                <button class="number-btn">3</button>
+                <button class="operator-btn" id="divide">/</button>
             </div>
             <div class="button-row" id="third-row">
-                <button id="number-btn">4</button>
-                <button id="number-btn">5</button>
-                <button id="number-btn">6</button>
-                <button class="operator" id="multiply">×</button>
+                <button class="number-btn">4</button>
+                <button class="number-btn">5</button>
+                <button class="number-btn">6</button>
+                <button class="operator-btn" id="multiply">×</button>
             </div>
             <div class="button-row" id="fourth-row">
-                <button id="number-btn">7</button>
-                <button id="number-btn">8</button>
-                <button id="number-btn">9</button>
-                <button class="operator" id="minus">-</button>
+                <button class="number-btn">7</button>
+                <button class="number-btn">8</button>
+                <button class="number-btn">9</button>
+                <button class="operator-btn" id="minus">-</button>
             </div>
             <div class="button-row" id="fifth-row">
-                <button id="number-btn">.</button>
-                <button id="number-btn">0</button>
-                <button class="operator" id="plus">+</button>
-                <button class="operator" id="equal">=</button>
+                <button id="dot-btn">.</button>
+                <button class="number-btn">0</button>
+                <button class="operator-btn" id="plus">+</button>
+                <button class="operator-btn" id="equal">=</button>
             </div>
         </div>
     </div>

@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 1px solid black;
 }
 
 body {
@@ -13,7 +12,7 @@ body {
     font-family: "Inconsolata", monospace;
     font-weight: 300;
     font-style: normal;
-    background-color: gray;
+    background: linear-gradient(120deg, #c973ff, #aebaf8)
 }
 
 p {
@@ -23,17 +22,20 @@ p {
     text-align: right;
     width: 100%;
     height: 100%;
+    white-space: normal;
 }
 
 button {
     width: 75px;
     font-size: 1.5em;
     border-radius: 6px;
-    background-color: gray;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    color: white;
+    border: 2px solid black;
 }
 
 .calculator {
@@ -42,8 +44,13 @@ button:hover {
     justify-content: center;
     height: 500px;
     width: 350px;
-    padding: 2px;
+    padding: 5px;
+    gap: 1em;
     border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .screen-container {
@@ -51,28 +58,56 @@ button:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 100%;
-    height: 30%;
-    padding: 10px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;
+    margin: 8px 8px 8px 8px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px)
 }
 
-#large-screen {
-    height: 60px;
-    font-size: 2.5em;
+#large-screen { 
+    height: 40px;
+    font-size: 1.8em;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#large-screen::-webkit-scrollbar {
+  height: 4px;
+}
+
+#large-screen::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+#large-screen::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #mini-screen {
+    color: rgba(0, 0, 0, 0.6);
     height: 40px;
-    font-size: 1.5em;
-    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#equal {
+    background-color: rgb(180, 84, 240, 0.8);
+}
+
+#square {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .button-row {
     display: flex;
     height: 70px;
-    padding: 3px;
+    padding: 5px;
     justify-content: space-around;
 }
 
+.operator-btn {
+    background-color: rgba(201, 115, 255, 0.239);
+}
